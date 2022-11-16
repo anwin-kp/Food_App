@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:shop_app/screens/favourites_screen.dart';
 
 import '../screens/filter_sceen.dart';
 
@@ -46,21 +47,23 @@ class MainDrawer extends StatelessWidget {
             'Meals',
             Icons.restaurant,
             () {
-              Navigator.of(context).pushNamed('/');
+              Navigator.of(context).pushReplacementNamed('/');
             },
           ),
           buildListTile(
             'Filter',
             FontAwesomeIcons.filter,
             () {
-              Navigator.of(context).pushNamed(FilterScreen.routeName);
+              Navigator.of(context)
+                  .pushReplacementNamed(FilterScreen.routeName);
             },
           ),
           buildListTile(
             'Favourites',
             FontAwesomeIcons.star,
             () {
-              Navigator.of(context).pushNamed(null);
+              Navigator.of(context)
+                  .pushReplacementNamed(FavouritesScreen.routeName);
             },
           ),
         ],

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/widgets.dart';
+import '../widgets/main_drawer.dart';
 
 class FilterScreen extends StatelessWidget {
   static const routeName = '/filters';
@@ -12,6 +9,7 @@ class FilterScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Your Filters'),
       ),
+      drawer: MainDrawer(),
       body: Center(
         child: Text('Filters!'),
       ),
